@@ -30,9 +30,11 @@ function App() {
     setSelectedId(isNew ? id : null)
     if (isNew) {
       const view = MUSCLES[id].view
+      // Z-Anatomy GLB's front faces -Z, so the rotation needed to *show* a side
+      // is π + the conventional Y rotation:
       if (view === 'front') setRotation(0)
       else if (view === 'back') setRotation(Math.PI)
-      else if (view === 'side') setRotation(-Math.PI / 2)
+      else if (view === 'side') setRotation(Math.PI / 2)
       // 'any' keeps the current angle
     }
   }

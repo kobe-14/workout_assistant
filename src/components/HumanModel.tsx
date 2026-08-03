@@ -109,7 +109,6 @@ export default function HumanModel({ selected, hovered, rotation, onSelect, onHo
     <group ref={group}>
       <primitive
         object={scene}
-        rotation={[0, Math.PI, 0]}
         onClick={handleClick}
         onPointerOver={handleOver}
         onPointerOut={() => onHover(null)}
